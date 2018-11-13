@@ -1,0 +1,991 @@
+$darkblue:#06284b;
+$boxshadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+@mixin bgimg{
+     background-repeat: no-repeat;
+     background-position:center;
+     background-size:cover;
+     background-attachment:fixed;
+}
+
+@mixin center-align{
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
+@mixin links{
+	text-decoration:none;
+}
+
+.nb{
+	background-color:$darkblue;
+}
+.nb-blue{
+	background-color:transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.line-1{
+	color: white;
+  	font-family: 'Anonymous Pro', monospace; 
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 35px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    @media only screen and (max-width:767px){
+    	font-size:25px;
+    }
+    @media only screen and (max-width:410px){
+    	font-size:20px;
+    }  
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(35) 2s 1 normal both,
+             blinkTextCursor 500ms steps(18) infinite normal;
+
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width:14.5em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- reset ---- */ body{ margin:0;} canvas{ display: block; vertical-align: bottom; }
+ /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 1500px; background-color: #06284b; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; z-index:-1;} 
+
+#particles-js{
+	@media only screen and (max-width:767px){
+		display:none;
+	}
+}
+
+
+.front-page{
+	padding-bottom:50px;
+	@include bgimg;
+	@media only screen and (max-width:767px){
+		background-image:url("../img/bg.png");
+	}
+	ul{
+		padding-top:20px;
+		margin-top:0;
+		@media only screen and (max-width:767px)
+		{
+			padding:0;
+			background-color:$darkblue;
+		}
+		li{
+			a{
+				color:white;
+				&:hover{
+					background-color:$darkblue;
+				}
+			}
+		}
+	}
+	.icon-bar{
+		background-color:white;
+		font-size:30px;
+	}
+	#logo{
+		width:100px;
+		@media only screen and (max-width:767px){
+			width:80px;
+		}
+	}
+	.navibar-list{
+		li{
+			text-align:center;
+			a{
+				&:focus{
+					background-color:$darkblue;
+				}
+			}
+		}
+	}
+	.front-display{
+		.synergylogo{
+			padding-top:100px;
+			width:512px;
+			padding-bottom:80px;
+			@include center-align;
+			@media only screen and (max-width:767px){
+				width:70%;
+				padding-bottom:30px;
+			}
+		}
+		.countdown{
+			visibility:hidden;
+			color:white;
+			.countdown-holder{
+				padding:15px;
+				font-size:30px;
+				text-align:center;
+				@media only screen and (max-width:767px){
+					font-size:25px;
+				}
+				@media only screen and (max-width:480px){
+					padding:10px;
+					font-size:22px;
+				}
+				@media only screen and (max-width:410px){
+					padding:5px;
+					font-size:20px;
+				}
+			}
+		}
+		.but{
+			margin-top:50px;
+			border:1px solid white;
+			color:$darkblue;
+			background-color:white;
+			padding:15px;
+			width:125px;
+			text-align:center;
+			@include center-align;
+			a{
+				&:hover{
+					@include links;;
+				}
+			}
+		}
+	}
+}
+.cdafteranim{
+	visibility:visible;
+}
+.tmptafter{
+	visibility:hidden;
+}
+.tmpt{
+	padding:50px 0px 50px 0px;
+	width:100%;
+	color:white;
+	font-size:30px;
+	position:absolute;
+	@include center-align;
+	text-align:center;
+	@media only screen and (max-width:767px){
+    	padding:100px 0px 100px 0px;
+    	font-size:25px;
+    }
+    @media only screen and (max-width:480px){
+		padding:70px 0px 70px 0px;
+	}
+	@media only screen and (max-width:410px){
+		font-size:20px;
+	}
+}
+
+.about{
+	background-color:white;
+	padding-top:60px;
+	.abouthead{
+		font-family: 'Titillium Web', sans-serif;
+		font-size:60px;
+		color:$darkblue;
+		text-align:center;
+		padding-top:30px;
+	}
+	.slide{
+		display:flex;
+		margin-top:50px;
+		margin-bottom:50px;
+		box-shadow:$boxshadow;
+		padding-left:0;
+		padding-right:0;
+		@media only screen and (max-width:768px){
+			display:block;
+			width:85%;
+		}
+		.slideimg{
+			width:250px;
+			@include center-align;
+			@media only screen and (max-width:768px){
+				width:200px;
+				padding-top:20px;
+				padding-bottom:20px;
+			}
+		}
+		.slimg{
+			background-color:white;
+			margin-top:auto;
+			margin-bottom:auto;
+			display:block;
+		}
+		.sltxt{
+			padding-top:50px;
+			padding-bottom:50px;
+			color:white;
+			background-color:$darkblue;
+			.longtext{
+				@media only screen and (max-width:768px){
+					display:none;
+				}
+			}
+			.sline1{
+				font-size:20px;
+				font-weight:bold;
+			}
+			@media only screen and (max-width:768px){
+				text-align:center;
+			}
+			.but{
+				cursor:pointer;
+				margin-top:20px;
+				border:1px solid white;
+				color:$darkblue;
+				background-color:white;
+				padding:10px;
+				width:125px;
+				text-align:center;
+				@include center-align;
+				display:none;
+				@media only screen and (max-width:768px){
+					display:block;
+				}
+				a{
+					&:hover{
+						@include links;;
+					}
+				}
+			}
+		}
+		.slcol{
+			flex:1;
+			@media only screen and (max-width:768px){
+				width:100%;
+			}
+		}
+	}		
+}
+
+
+
+.itinerary{
+	background-image:url("../img/bg2.png");
+	@include bgimg;
+	padding-top:50px;
+	padding-bottom:50px;
+	.itineraryhead{
+		padding-top:30px;
+		padding-bottom:30px;
+		text-align:center;
+		color:white;
+		font-family: 'Titillium Web', sans-serif;
+		font-size:70px;
+		@media only screen and (max-width:611px){
+			font-size:50px;
+		}
+	}
+	.dayhead{
+		color:white;
+		text-align:center;
+		font-size:35px;
+		@media only screen and (max-width:611px){
+			font-size:30px;
+		}
+		@media only screen and (max-width:400px){
+			font-size:30px;
+		}
+	}
+	.day1{
+		padding:40px 0px 40px 0px;
+		width:1016px;
+		@include center-align;
+		@media only screen and (max-width:1043px){
+			display:none;
+		}
+		@media only screen and (max-width:611px){
+			display:block;
+			width:400px;
+		}
+		@media only screen and (max-width:400px){
+			width:200px;
+		}
+
+	}
+	.day1row1{
+		padding:40px 0px 0px 0px;
+		width:608px;
+		@include center-align;
+		display:none;
+		@media only screen and (max-width:1043px){
+			display:block;
+		}
+		@media only screen and (max-width:611px){
+			display:none;
+		}
+	}
+	.day1row2{
+		padding:0px 0px 40px 0px;
+		width:404px;
+		@include center-align;
+		display:none;
+		@media only screen and (max-width:1043px){
+			display:block;
+		}
+		@media only screen and (max-width:611px){
+			display:none;
+		}
+	}
+	.day3{
+		padding:40px 0px 40px 0px;
+		width:608px;
+		@include center-align;
+		@media only screen and (max-width:611px){
+			width:400px;
+		}
+		@media only screen and (max-width:400px){
+			width:200px;
+		}
+	}
+	.itinerary-element{
+		position: relative;
+		display:inline-block;
+		@media only screen and (max-width:611px){
+			display:block;
+			margin-bottom:10px;
+		}
+		@media only screen and (max-width:400px){
+			margin-bottom:0;
+		}
+		.itinerarypics{
+			width:200px;
+			padding:40px;
+		}
+		.overlay {
+			position: absolute; 
+			bottom: 0; 
+			top:0;
+			background: rgb(0, 0, 0);
+			background: rgba(0, 0, 0, 0.5);
+			color: #f1f1f1; 
+			width: 200px;
+			transition: .5s ease;
+			opacity:0;
+			color: white;
+			font-size: 20px;
+			padding: 20px;
+			text-align: center;
+			@media only screen and (max-width:611px){
+				left:200px;
+				opacity:1;
+			}
+			@media only screen and (max-width:400px){
+				left:0;
+				opacity:0;
+			}
+		}
+		&:hover .overlay {
+			opacity: 1;
+		}
+	}
+}
+
+
+.events{
+	background-color:white;
+	padding-bottom:100px;
+	@media only screen and (max-width:730px){
+		padding-bottom:50px;
+	}
+	.eventhead{
+		font-family: 'Titillium Web', sans-serif;
+		font-size:60px;
+		color:$darkblue;
+		text-align:center;
+		padding-top:100px;
+		padding-bottom:50px;
+		@media only screen and (max-width:611px){
+			font-size:50px;
+		}
+	}
+	.eventcar{
+		@media only screen and (min-width:1125px){
+			width:70%;
+		}
+		@media only screen and (max-width:730px){
+			width:60%;
+		}
+		@media only screen and (max-width:730px){
+			width:70%;
+		}
+		@media only screen and (max-width:500px){
+			width:85%;
+		}
+	}
+	.eventbox{
+		display:flex;
+		box-shadow:$boxshadow;
+		.eventimg{
+				height:100%;
+				width:100%;
+		}
+		.eventtext{
+			background-color:$darkblue;
+			margin:0;
+			padding:30px 20px 0px 20px;
+			font-size:16px;
+			@media only screen and (max-width:1235px){
+				font-size:14px;
+			}
+			@media only screen and (max-width:1120px){
+				font-size:15.5px;
+			}
+			@media only screen and (max-width:980px){
+				font-size:14.5px;
+			}
+			@media only screen and (max-width:930px){
+				font-size:13px;
+			}
+			@media only screen and (max-width:830px){
+				padding:20px 15px 0px 15px;
+			}
+			@media only screen and (max-width:805px){
+				font-size:12.5px;
+			}
+			@media only screen and (max-width:770px){
+				font-size:12px;
+			}
+			@media only screen and (max-width:730px){
+				display:none;
+			}
+			color:white;
+			.eventname{
+				font-size:25px;
+				font-weight:bold;
+				@media only screen and(max-width:800px){
+					font-size:15px;
+				}
+				@media only screen and(max-width:730px){
+					text-align:left;
+					font-size:20px;
+					font-weight:bold;
+					flex:1;
+				}
+			}
+			.but{
+				margin-top:50px;
+				border:1px solid white;
+				color:$darkblue;
+				background-color:white;
+				padding:15px;
+				width:125px;
+				text-align:center;
+				@media only screen and (max-width:890px){
+					padding:10px;
+					width:110px;
+					margin-top:30px;
+				}
+				@include center-align;
+				a{
+					&:hover{
+						@include links;;
+					}
+				}
+			}
+			
+		}
+		.eventcol{
+			flex:1;
+			box-shadow:$boxshadow;
+		}
+	}
+}
+
+
+
+.combos{
+	padding-bottom:100px;
+	background-color:white;
+	.combohead{
+		padding-top:30px;
+		padding-bottom:30px;
+		text-align:center;
+		color:$darkblue;
+		font-family: 'Titillium Web', sans-serif;
+		font-size:70px;
+		@media only screen and (max-width:800px){
+			font-size:50px;
+		}
+		@media only screen and (max-width:450px){
+			font-size:40px;
+		}
+	}
+	.combocontainer{
+		width:95%;
+		@include center-align;
+		@media only screen and (max-width:768px){
+			width:80%;
+		}
+	}
+	.combocol{
+		width:18%;
+		display:inline-block;
+		margin-left:0.8%;
+		margin-right:0.8%;
+		@media only screen and (max-width:1250px){
+			width:29%;
+			margin-left:2%;
+			margin-right:2%;
+		}
+		@media only screen and (max-width:840px){
+			width:29.5%;
+			margin-left:1.5%;
+			margin-right:1.5%;
+		}
+		ul{
+			box-shadow:$boxshadow;
+			list-style-type:none;
+			text-align:center;
+			padding:0;
+			.combo_l1{
+				font-family: 'Titillium Web', sans-serif;
+				font-size:20px;
+				background-color:$darkblue;
+				color:white;
+				padding:15px;
+			}
+			.combo_l2{
+				background-color:lightgrey;
+				padding:15px;
+			}
+			.combolist{
+				padding:15px;
+				border-bottom:1px solid lightgrey;
+				&:hover{
+					background-color:lightgrey;
+				}
+			}
+			.combo_reg{
+				background-color:lightgrey;
+				padding:10px;
+				.but{
+					color:white;
+					background-color:$darkblue;
+					padding:15px;
+					width:125px;
+					text-align:center;
+					@media only screen and (max-width:890px){
+						padding:10px;
+						width:110px;
+					}
+					@include center-align;
+					a{
+						color:white;
+						&:hover{
+							@include links;;
+						}
+					}
+				}
+			}
+		}
+		@media only screen and (max-width:768px){
+			display:none;
+			width:100%;
+			margin:0;
+		}
+	}
+	.combospace{
+		width:0;
+		display:inline-block;
+		@media only screen and (max-width:1250px){
+			width:100%;
+			height:30px;
+		}
+		@media only screen and (max-width:768px){
+			display:none;
+		}
+
+	}
+	.colline1{
+		@media only screen and (max-width:1250px){
+			width:29%;
+			margin-left:18.5%;
+			margin-right:2%;
+		}
+		@media only screen and (max-width:840px){
+			margin-left:19.5%;
+			margin-right:1%;
+		}
+		@media only screen and (max-width:768px){
+			display:none;
+			width:100%;
+			margin:0;
+		}
+	}
+	.colline2{
+		@media only screen and (max-width:1250px){
+			width:29%;
+			margin-left:2%;
+			margin-right:18.5%;
+		}
+		@media only screen and (max-width:840px){
+			margin-left:1%;
+			margin-right:19.5%;
+		}
+		@media only screen and (max-width:768px){
+			display:none;
+			width:100%;
+			margin:0;
+		}
+	}
+	.combo1{
+		@media only screen and (max-width:768px){
+			display:block;
+		}
+	}
+	.combodropdown{
+		display:none;
+		@media only screen and (max-width:768px){
+			display:block;
+		}
+		margin-bottom:20px;
+		.dropdown{
+			width:200px;
+			border-bottom:1px solid lightgrey;
+			text-align:center;
+			@include center-align;
+			a{
+				font-size:20px;
+				@include links;
+				color:$darkblue;
+			}
+		}
+		.dropdown-menu{
+			width:200px;
+			padding:0;
+			li{
+				text-align:center;
+				padding:10px;
+				cursor:pointer;
+				&:hover{
+					background-color:lightgrey;
+					transition: .5s ease;
+				}
+			}
+		}
+
+	}
+}
+
+.sponsors{
+	.titlesponsorcontainer{
+		width:90%;
+		@include center-align;
+		.titlesponsor{
+			width:100%;
+			.titlesponsorpic{
+				width:50%;
+				@include center-align;
+				@media only screen and (max-width:1150px){
+					width:60%;
+				}
+				@media only screen and (max-width:690px){
+					width:80%;
+				}
+			}
+		}
+	}
+	// margin-top:100px;
+	padding-top:50px;
+	padding-bottom:50px;
+	.sponsorhead{
+		padding-top:30px;
+		padding-bottom:30px;
+		text-align:center;
+		color:$darkblue;
+		font-family: 'Titillium Web', sans-serif;
+		font-size:70px;
+		@media only screen and (max-width:800px){
+			font-size:50px;
+		}
+		@media only screen and (max-width:450px){
+			font-size:40px;
+		}
+	}
+	.sponsorcontainer{
+		width:90%;
+		@include center-align;
+	}
+	background-color:lightgrey;
+	.sponsorpic{
+		display:inline-block;
+		width:24%;
+		@media only screen and (max-width:1200px){
+			width:48%;
+		}
+		@media only screen and (max-width:590px){
+			width:100%;
+		}
+	}
+	.sponsorpiclast2{
+	 	width:48%;
+	 	@media only screen and (max-width:590px){
+	 		width:100%;
+	 	}
+	 }
+	// .sponsorpiclast{
+	// 	@media only screen and (max-width:1150px){
+	// 		width:100%;
+	// 	}
+	// }
+	.sponsor1,.sponsor2,.sponsor3,.sponsor4,.sponsor5,.sponsor6,.sponsor7,.sponsor8,.sponsor9,.sponsor10,.sponsor11,.sponsor12,.sponsor13,.sponsor14{
+		width:250px;
+		@include center-align;
+		@media only screen and (max-width:590px){
+			width:200px;
+		}
+
+	}
+	.sponsor1{
+		padding-top:36px;
+		padding-bottom:36px;
+
+	}
+	.sponsor2{
+		padding-top:65px;
+		padding-bottom:65px;
+
+	}
+	.sponsor3{
+		padding-left:50px;
+		padding-right:50px;
+	}
+	.sponsor4{
+		padding-top:40.78px;
+		padding-bottom:40.78px;
+	}
+	.sponsor5{
+		padding-left:39px;
+		padding-right:39px;
+	}
+	.sponsor6{
+		padding-top:61px;
+		padding-bottom:61px;
+	}
+	.sponsor7{
+		padding-top:20.5px;
+		padding-bottom:20.5px;
+	}
+	.sponsor8{
+		padding-top:46px;
+		padding-bottom:46px;
+	}
+	.sponsor9{
+		padding-top:35px;
+		padding-bottom:35px;
+	}
+	.sponsor10{
+		padding-top:33.5px;
+		padding-bottom:33.5px;
+	}
+	.sponsor11{
+		padding-top:35px;
+		padding-bottom:35px;
+	}
+	.sponsor12{
+		padding-top:39.5px;
+		padding-bottom:39.5px;
+	}
+	.sponsor13{
+		padding-top:30px;
+		padding-bottom:30px;
+	}
+	.sponsor14{
+		padding-top:55px;
+		padding-bottom:55px;
+	}
+}
+.partners{
+	padding-top:50px;
+	padding-bottom:50px;
+	background-color:$darkblue;
+	.partnerhead{
+		padding-top:30px;
+		padding-bottom:30px;
+		text-align:center;
+		color:white;
+		font-family: 'Titillium Web', sans-serif;
+		font-size:70px;
+		@media only screen and (max-width:800px){
+			font-size:50px;
+		}
+		@media only screen and (max-width:450px){
+			font-size:40px;
+		}
+	}
+	.partnercontainer{
+		width:90%;
+		@include center-align;
+	}
+	.partnerpic{
+		display:inline-block;
+		width:19.5%;
+		@media only screen and (max-width:1110px){
+			width:48%;
+		}
+		@media only screen and (max-width:590px){
+			width:100%;
+		}
+	}
+	.partnerpic5{
+		@media only screen and(max-width:1110px){
+			width:100%;
+		}
+	}
+	.partner1,.partner2,.partner3,.partner4,.partner5{
+		width:180px;
+		@include center-align;
+	}
+	.partner1{
+		
+	}
+	.partner2{
+		height:240px;
+		padding-top:30px;
+		padding-bottom:30px;
+	}
+	.partner3{
+		height:240px;
+		padding-top:25px;
+		padding-bottom:25px;
+	}
+	.partner4{
+		height:240px;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+	.partner5{
+		width:250px;
+		height:240px;
+		padding-top:90px;
+		padding-bottom:90px;
+	}
+	.partner2,.partner3,.partner4,.partner5{
+		@media only screen and (max-width:590px){
+			padding-top:20px;
+			padding-bottom:20px;
+			height:auto;
+		}
+	}
+}
+
+.contact{
+	.contacthead{
+		padding-top:30px;
+		padding-bottom:30px;
+		text-align:center;
+		color:$darkblue;
+		font-family: 'Titillium Web', sans-serif;
+		font-size:70px;
+		@media only screen and (max-width:800px){
+			font-size:50px;
+		}
+		@media only screen and (max-width:450px){
+			font-size:40px;
+		}
+	}
+	.contactperson{
+		margin-top:30px;
+		margin-bottom:30px;
+		padding:50px;
+		width:33%;
+		display:inline-block;
+		color:black;
+		font-size:15px;
+		text-align:center;
+		border-right:2px solid black;
+		@media only screen and (max-width:820px){
+			width:85%;
+			@include center-align;
+			padding:20px 0px 20px 0px;
+			display:block;
+			border-right:none;
+			border-bottom:2px solid black
+		}
+		&:hover{
+			background: #f5f5f5;
+			transition: 1s ease;
+		}
+	}
+	#lastcontactperson{
+		border:none;
+	}
+}
+.social{
+	padding-top:20px;
+	padding-bottom:20px;
+	.sites{
+		text-align:center;
+		width:530px;
+		@include center-align;
+		@media only screen and (max-width:535px){
+			width:300px;
+		}
+		.site{
+			@include links;
+			color:$darkblue;
+			font-size:30px;
+			padding:25px;
+			@media only screen and (max-width:535px){
+				font-size:25px;
+				padding:15px;
+			}
+		}
+	}
+}
+
+.credits{
+	color:$darkblue;
+	font-size:20px;
+	text-align:center;
+	padding-bottom:10px;
+	@media only screen and (max-width:480px){
+			font-size:18px;
+	}
+	@media only screen and (max-width:440px){
+			font-size:16px;
+	}
+	@media only screen and (max-width:370px){
+			font-size:14px;
+	}
+	@media only screen and (max-width:330px){
+			font-size:13px;
+	}
+}

@@ -9,6 +9,10 @@
   background-color: transparent;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
 /* line 27, ../sass/style.scss */
 html {
   overflow-x:hidden;

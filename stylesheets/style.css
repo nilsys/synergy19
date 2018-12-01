@@ -11,6 +11,7 @@
 
 /* line 27, ../sass/style.scss */
 html {
+  width:100vw;
   overflow-x:hidden;
   scroll-behavior: smooth;
 }

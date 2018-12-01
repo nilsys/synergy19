@@ -8,10 +8,7 @@
 .nb-blue {
   background-color: transparent;
 }
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
+
 /* line 27, ../sass/style.scss */
 html {
   scroll-behavior: smooth;

@@ -11,8 +11,7 @@
 
 /* line 27, ../sass/style.scss */
 html {
-  margin-left: calc(100vw - 100%);
-  margin-right: 0;
+  overflow-x:hidden;
   scroll-behavior: smooth;
 }
 

@@ -8,11 +8,11 @@
 .nb-blue {
   background-color: transparent;
 }
-
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+}
 /* line 27, ../sass/style.scss */
 html {
-  width:100vw;
-  overflow-x:hidden;
   scroll-behavior: smooth;
 }
 
